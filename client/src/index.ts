@@ -3,8 +3,8 @@ import { Affiliates } from './affiliates.js'
 import { themeMgr } from './theme.js'
 import { config, initGithubRouting, getPaths } from './config.js'
 
-const { basePath, userId } = getPaths()
 initGithubRouting()
+const { basePath, userId } = getPaths()
 
 new App({
   routeService:  new RouteService ({ basePath }),
