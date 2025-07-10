@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
-export default defineConfig({
-  base: './', // emit relative URLs → works at /, /repo/, or any sub-path
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '/' : '/linqpad-affiliate/',
   server: {
     port: 3000,
   },
@@ -9,4 +9,4 @@ export default defineConfig({
     // Generate external source maps for production builds so they can be used in Chrome DevTools.
     sourcemap: true,
   },
-}) 
+})) 
