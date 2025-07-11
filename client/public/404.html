@@ -5,8 +5,10 @@
     <title>Redirecting...</title>
     <script>
       sessionStorage.redirect = location.href;
+      // If on custom domain, redirect to root; if on github.io, redirect to repo path
+      var redirectPath = location.hostname.includes('github.io') ? '/linqpad-affiliate/' : '/';
+      location.replace(location.origin + redirectPath);
     </script>
-    <meta http-equiv="refresh" content="0;URL='/linqpad-affiliate/'"></meta>
   </head>
   <body>
   </body>
