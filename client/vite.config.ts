@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig(({ command }) => ({
-  base: command === 'serve' ? '/' : '/linqpad-affiliate/',
+  base: command === 'serve' ? '/' : './',
   server: {
     port: 3000,
   },
